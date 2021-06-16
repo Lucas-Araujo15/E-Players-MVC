@@ -52,7 +52,6 @@ namespace MVC_E_Players.Models
             }
             return equipes;
         }
-
         public string Preparar(Equipe e)
         {
             return $"{e.IdEquipe};{e.Nome};{e.Imagem}";
