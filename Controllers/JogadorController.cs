@@ -9,11 +9,13 @@ namespace MVC_E_Players.Controllers
     public class JogadorController : Controller
     {
         Jogador player = new Jogador();
+        Equipe teste = new Equipe();
 
         [Route("ListarJogador")]
         public IActionResult Index()
         {
             ViewBag.Jogador = player.LerTodas();
+            ViewBag.Equipe = teste.LerTodas();
             return View();
         }
 

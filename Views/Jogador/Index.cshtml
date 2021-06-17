@@ -7,7 +7,7 @@
 <form method="POST" action='@Url.Action("CadastrarJogador")'>
     <label>Equipe</label>
     <select name="EquipeJ">
-        @foreach (Equipe item in equipe.LerTodas())
+        @foreach (Equipe item in ViewBag.Equipe)
         {
             <option value="@item.IdEquipe">@item.Nome</option>
         }
