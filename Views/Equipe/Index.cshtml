@@ -2,8 +2,9 @@
 @{
     ViewData["Title"] = "Equipes";
 }
+<script src="https://kit.fontawesome.com/39a47b8673.js" crossorigin="anonymous"></script>
 
-<form method="POST" action='@Url.Action("Cadastrar")'>
+<form method="POST" action='@Url.Action("Cadastrar")' enctype="multipart/form-data">
     <label>ID</label>
     <input type="text" name="IdEquipe">
 
@@ -11,7 +12,7 @@
     <input type="text" name="Nome">
 
     <label>Imagem</label>
-    <input type="text" name="Imagem">
+    <input type="file" name="Imagem">
 
     <button type="submit">Cadastrar</button>
 </form>
@@ -28,7 +29,8 @@
             <tr>
                 <td>@item.IdEquipe</td>
                 <td>@item.Nome</td>
-                <td>@item.Imagem</td>
+                <td><img src="/img/Equipes/@item.Imagem" alt="Logo da equipe" width="50px"></td>
+                <td><a asp-area="" asp-controller = "Equipe" asp-action="Excluir" asp-route-id = "@item.IdEquipe"><i class="fas fa-trash" width="300px" style="color:black"  ></i></a></td>
             </tr>
         }
     </tbody>
