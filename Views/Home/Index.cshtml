@@ -2,9 +2,219 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-    <a class="navbar-brand" asp-area="Link para a página de equipes" asp-controller="Equipe" asp-action="Index">Equipes</a>
-    <a class="navbar-brand" asp-area="Link para a página de jogadores" asp-controller="Jogador" asp-action="Index">Jogadores</a>
-</div>
+
+<section id="inicio" class="banner">
+    <nav class="container">
+
+
+        <div class="imagem_banner1">
+            <img src="assets/cod.png" alt="Personagem do jogo Call of Duty">
+        </div>
+        <div class="botao">
+            <h1>Liga E-Players</h1>
+            <span>O maior portal de campeonatos online</span>
+            <nav class="CPA">
+                <a asp-area="" asp-controller="Equipe" asp-action="Index">Cadastrar equipe</a>
+            </nav>
+            <nav class="CPA">
+                <a asp-area="" asp-controller="Jogador" asp-action="Index">Cadastrar jogador</a>
+            </nav>
+        </div>
+</section>
+<section class="parcerias">
+
+    <i class="fas fa-chevron-left" onclick="botaoJogosL()"></i>
+    <i class="fas fa-chevron-right" onclick="botaoJogosR()"></i>
+
+    <div id="logos" class="jogos">
+
+        <img class="formula" src="assets/formula-1-logo.png" alt="Logo da Formula 1">
+        <img class="lol" src="assets/logo-lol.png" alt="Logo do jogo League Of Legends">
+        <img class="csgo" src="assets/Counter-Strike-Logo.png" alt="Logo do jogo Counter Strike">
+        <img class="valorant" src="assets/valorant-logo.png" alt="Logo do jogo Valorant">
+        <img class="fifa" src="assets/FIFA_logo.png" alt="Logo do jogo FIFA">
+
+    </div>
+    </nav>
+</section>
+
+<section id="campeonato" class="sobre">
+    <nav class="container">
+
+        <div class="TextoSobre">
+            <h2>Como participar das ligas?</h2>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                the
+                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of
+                type
+                and scrambled it to make a type specimen book. It has survived not only five centuries, but also
+                the
+                leap into electronic typesetting, remaining essentially unchanged. It was popularised in the
+                1960s
+                with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with
+                desktop
+                publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
+        </div>
+
+
+        <nav class="conteudo">
+
+        </nav>
+        <img src="assets/tracer.png" alt="Personagem do jogo Overwatch 2">
+
+    </nav>
+
+</section>
+<section id="horarios" class="partidas">
+
+    <nav>
+        <span>ao vivo</span>
+        <div>
+            <p>sk</p>
+            <img src="assets/sk-logo.png" alt="Logo da equipe SK">
+            <p>vs</p>
+            <img src="assets/fla-logo.png" alt="Logo da equipe Flamengo">
+            <p>sk</p>
+        </div>
+        <hr>
+        <span>em breve</span>
+        <div>
+            <p>sk</p>
+            <img src="assets/sk-logo.png" alt="Logo da equipe SK">
+            <p>vs</p>
+            <img src="assets/fla-logo.png" alt="Logo da equipe Flamengo">
+            <p>sk</p>
+        </div>
+        <div>
+            <p>sk</p>
+            <img src="assets/sk-logo.png" alt="Logo da equipe SK">
+            <p>vs</p>
+            <img src="assets/fla-logo.png" alt="Logo da equipe Flamengo">
+            <p>sk</p>
+        </div>
+    </nav>
+</section>
+<section id="noticias" class="noticias">
+
+
+    <nav class="secao_noticias">
+
+        <nav class="blocos_noticias">
+            <h2>Notícias</h2>
+            <div>
+                <article>
+                    <img src="assets/player (1).jpg" alt="Competidor">
+                    <h3>título da notícia</h3>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. It has
+                        survived
+                        not only five centuries.</p>
+                </article>
+                <article>
+                    <img src="assets/player (1).jpg" alt="Competidor">
+                    <h3>título da notícia</h3>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. It has
+                        survived
+                        not only five centuries.</p>
+                </article>
+                <article>
+                    <img src="assets/player (1).jpg" alt="Competidor">
+                    <h3>título da notícia</h3>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. It has
+                        survived
+                        not only five centuries.</p>
+                </article>
+            </div>
+            <div>
+                <article>
+                    <img src="assets/player (1).jpg" alt="Competidor">
+                    <h3>título da notícia</h3>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. It has
+                        survived
+                        not only five centuries.</p>
+                </article>
+                <article>
+                    <img src="assets/player (1).jpg" alt="Competidor">
+                    <h3>título da notícia</h3>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. It has
+                        survived
+                        not only five centuries.</p>
+                </article>
+                <article>
+                    <img src="assets/player (1).jpg" alt="Competidor">
+                    <h3>título da notícia</h3>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. It has
+                        survived
+                        not only five centuries.</p>
+                </article>
+            </div>
+        </nav>
+        <nav class="box_partidas">
+            <h2>Próximos jogos</h2>
+            <div class="bloco_partidas">
+                <div class="outros_jogos">
+                    <p>sk</p>
+                    <img src="assets/sk-logo.png" alt="Logo da equipe SK">
+                    <p>vs</p>
+                    <img src="assets/fla-logo.png" alt="Logo da equipe Flamengo">
+                    <p>sk</p>
+                </div>
+                <p> 01/12/2020 19:00 </p>
+                <div class="outros_jogos">
+                    <p>sk</p>
+                    <img src="assets/sk-logo.png" alt="Logo da equipe SK">
+                    <p>vs</p>
+                    <img src="assets/fla-logo.png" alt="Logo da equipe Flamengo">
+                    <p>sk</p>
+                </div>
+                <p> 01/12/2020 19:00 </p>
+                <div class="outros_jogos">
+                    <p>sk</p>
+                    <img src="assets/sk-logo.png" alt="Logo da equipe SK">
+                    <p>vs</p>
+                    <img src="assets/fla-logo.png" alt="Logo da equipe Flamengo">
+                    <p>sk</p>
+                </div>
+                <p> 01/12/2020 19:00 </p>
+                <div class="outros_jogos">
+                    <p>sk</p>
+                    <img src="assets/sk-logo.png" alt="Logo da equipe SK">
+                    <p>vs</p>
+                    <img src="assets/fla-logo.png" alt="Logo da equipe Flamengo">
+                    <p>sk</p>
+                </div>
+                <p> 01/12/2020 19:00 </p>
+                <div class="outros_jogos">
+                    <p>sk</p>
+                    <img src="assets/sk-logo.png" alt="Logo da equipe SK">
+                    <p>vs</p>
+                    <img src="assets/fla-logo.png" alt="Logo da equipe Flamengo">
+                    <p>sk</p>
+                </div>
+                <p> 01/12/2020 19:00 </p>
+                <div class="outros_jogos">
+                    <p>sk</p>
+                    <img src="assets/sk-logo.png" alt="Logo da equipe SK">
+                    <p>vs</p>
+                    <img src="assets/fla-logo.png" alt="Logo da equipe Flamengo">
+                    <p>sk</p>
+                </div>
+                <p> 01/12/2020 19:00 </p>
+                <div class="outros_jogos">
+                    <p>sk</p>
+                    <img src="assets/sk-logo.png" alt="Logo da equipe SK">
+                    <p>vs</p>
+                    <img src="assets/fla-logo.png" alt="Logo da equipe Flamengo">
+                    <p>sk</p>
+                </div>
+                <p> 01/12/2020 19:00 </p>
+
+            </div>
+
+
+        </nav>
+
+
+    </nav>
+
+
+</section>

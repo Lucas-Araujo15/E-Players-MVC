@@ -1,48 +1,105 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - MVC_E_Players</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" />
+    <script src="https://kit.fontawesome.com/c48f96fb5c.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Players</title>
+    <link rel="stylesheet" href="~/css/style_e-players.css">
 </head>
+
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">MVC_E_Players</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+        <div class="ContainerHeader">
+
+            <a class="btn_menu" href="javascript:void(0)" onclick="botaoDoMenu()">
+                <i class="fas fa-bars"></i>
+            </a>
+            <a asp-area="" asp-controller="Home" asp-action="Index">
+                <img class="logo" src="~/assets/logo.svg" alt="Logo E-Players">
+            </a>
+            <nav id="links" class="linksMenu">
+                <a href="#inicio">início</a>
+                <a href="#horarios">horários</a>
+                <a href="#campeonato">campeonato</a>
+                <a href="#">resultados</a>
+                <a href="#noticias">notícias</a>
+            </nav>
+
+
+        </div>
     </header>
-    <div class="container">
+    <div>
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2021 - MVC_E_Players - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-        </div>
+    <footer>
+        <nav class="rodape">
+            <div class="resp_footer">
+                <div class="links_rodape margem_resp">
+                    <span>Links úteis</span>
+                    <ul>
+                        <a href="#">
+                            <li>Regras de utilização</li>
+                        </a>
+                        <a href="#">
+                            <li>Suporte</li>
+                        </a>
+                        <a href="#">
+                            <li>Central de ajuda</li>
+                        </a>
+                        <a href="#">
+                            <li>Contato</li>
+                        </a>
+                    </ul>
+                </div>
+                <div class="links_rodape margem_resp">
+                    <span>Páginas</span>
+                    <ul>
+                        <a href="#">
+                            <li>Início</li>
+                        </a>
+                        <a href="#">
+                            <li>Campeonatos</li>
+                        </a>
+                        <a href="#">
+                            <li>Resultados</li>
+                        </a>
+                        <a href="#">
+                            <li>Notícias</li>
+                        </a>
+                        <a href="#">
+                            <li>Login/Cadastro</li>
+                        </a>
+                    </ul>
+                </div>
+            </div>
+
+            <img class="margem_resp" src="~/assets/logo.svg" alt="Logo E-Players">
+            <div class="news_footer margem_resp">
+                <span>Faça parte do nosso clã, assine nossa newsletter:</span>
+                <div class="newsletter">
+                    <input class="barra_de_cadastro" type="text" placeholder="Email">
+                    <button class="cadastrar" type="button">Cadastrar</button>
+                </div>
+                <div class="RedesSociais">
+                    <span>Siga-nos em:</span>
+                    <img src="~/assets/instagram (1).png" alt="Logo da rede social Instagram">
+                    <img src="~/assets/youtube (1).png" alt="Logo da plataforma de vídeos youtube">
+                    <img src="~/assets/facebook (1).png" alt="Logo da rede social Facebook">
+                </div>
+
+            </div>
+        </nav>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
+
 </html>
