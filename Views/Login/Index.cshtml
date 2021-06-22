@@ -1,0 +1,21 @@
+@{
+    ViewData["Title"] = "Login"; 
+}
+<section class="banner_cadastro3">
+    <h1>Login</h1>
+</section>
+<section class="formulario formulario2">
+    <nav class="cadastro cadastro2">
+        <form class="times2 times" method="POST" action='@Url.Action("Logar")' enctype="multipart/form-data">
+            <div>
+                <label>Email</label><br>
+                <input name="Email1" class="altura" type="text" required>
+            </div>
+            <div>
+                <label>Senha</label><br>
+                <input name="Senha1" class="altura" type="password" required>
+            </div>
+            <button type="submit" class="button button3">Entrar</button>
+        </form>
+    </nav>
+</section>

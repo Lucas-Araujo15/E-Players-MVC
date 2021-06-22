@@ -26,6 +26,18 @@
                 <a href="#campeonato">campeonato</a>
                 <a href="#">resultados</a>
                 <a href="#noticias">notícias</a>
+
+                @if (ViewBag.UserName != null)
+                {
+                    <li style="color: #2652BB">Olá @ViewBag.UserName</li>
+                    <a asp-area="" asp-controller="Login" asp-action="Logout">LOGOUT</a>
+                }
+                else
+                {
+                    <a asp-area="" asp-controller="Login" asp-action="Logar">LOGIN</a>
+                }
+
+
             </nav>
 
 

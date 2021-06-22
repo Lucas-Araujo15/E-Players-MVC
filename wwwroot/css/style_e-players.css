@@ -68,7 +68,7 @@ header{
     justify-content: space-between;
 }
 
-.linksMenu a{
+.linksMenu a, li{
      height: 22px;
      text-decoration: none;
      color: white;
@@ -197,7 +197,7 @@ header{
 }
 
 .sobre{
-    background: linear-gradient(0deg, rgba(221, 113, 13, 0.55), rgba(221, 113, 13, 0.55)), url(~/assets/overwatch.jpg);
+    background: linear-gradient(0deg, rgba(221, 113, 13, 0.55), rgba(221, 113, 13, 0.55)), url(assets/overwatch.jpg);
     height: 500px;
     background-size: 100%;
     display: flex;
@@ -674,6 +674,20 @@ footer {
     background-position-y: -80px;
 }
 
+.banner_cadastro3{
+    height: 340px;
+    width: 100%;
+    overflow: hidden;
+    background: linear-gradient(269.98deg, rgba(184, 101, 54, 0.53) 0.02%, rgba(170, 93, 50, 0.439125) 33.47%, rgba(98, 61, 109, 0.212) 50.38%, rgba(64, 46, 137, 0.3339) 63.95%, rgba(33, 32, 163, 0.4399) 86.41%, rgba(9, 68, 182, 0) 99.36%), url(assets/bannerLogin.jpg) center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 40px;
+    background-position-y: -80px;
+}
+
 .times2{
         height: 425px;
 
@@ -689,6 +703,10 @@ footer {
 
 .button2{
     background-color: #D09807;
+}
+
+.button3{
+    background-color: #DC631F;
 }
 
 .equipes2{

@@ -11,7 +11,9 @@ namespace MVC_E_Players.Models
         public string Nome { get; set; }
         public int IdEquipe { get; set; }
         public const string CAMINHO = "database/jogador";
-
+        public string Email { get; set; }
+        public string Senha { get; set; }
+        
         public Jogador()
         {
             CriarPastaArquivo(CAMINHO);
@@ -48,6 +50,8 @@ namespace MVC_E_Players.Models
                 jogador.IdEquipe = Int32.Parse(linha[0]);
                 jogador.Nome = linha[1];
                 jogador.IdJogador = Int32.Parse(linha[2]);
+                jogador.Senha = linha[3];
+                jogador.Email = linha[4];
 
                 jogadores.Add(jogador);
             }
@@ -56,7 +60,7 @@ namespace MVC_E_Players.Models
 
         public string Preparar(Jogador e)
         {
-            return $"{e.IdEquipe};{e.Nome};{e.IdJogador}";
+            return $"{e.IdEquipe};{e.Nome};{e.IdJogador};{e.Senha};{e.Email}";
         }
     }
 }
