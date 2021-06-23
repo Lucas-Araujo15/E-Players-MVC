@@ -2,13 +2,18 @@
 @{
     ViewData["Title"] = "Equipes";
 }
+<head>
+    <title>Equipes</title>
+    <link rel="shortcut icon" type="image/x-icon" href="~/wwwroot/favicon.ico">
+</head>
+
 <script src="https://kit.fontawesome.com/39a47b8673.js" crossorigin="anonymous"></script>
 
 <section class="banner_cadastro">
     <h1>Cadastro de times</h1>
 </section>
 <section class="formulario">
-    <nav class="cadastro">
+    <div class="cadastro">
         <form class="times" method="POST" action='@Url.Action("Cadastrar")' enctype="multipart/form-data">
             <div>
                 <label>ID da Equipe</label><br>
@@ -50,5 +55,5 @@
                 </tbody>
             </table>
         </div>
-    </nav>
+    </div>
 </section>

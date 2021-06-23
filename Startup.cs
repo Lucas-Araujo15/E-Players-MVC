@@ -53,7 +53,7 @@ namespace MVC_E_Players
             app.UseRouting();
 
             app.UseAuthorization();
-            
+
             app.UseSession();
 
             app.UseEndpoints(endpoints =>

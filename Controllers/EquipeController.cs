@@ -43,7 +43,7 @@ namespace MVC_E_Players.Controllers
             }
             else
             {
-                novaEquipe.Imagem = "padrao.png";
+                novaEquipe.Imagem = "userpadrao.png";
             }
 
 

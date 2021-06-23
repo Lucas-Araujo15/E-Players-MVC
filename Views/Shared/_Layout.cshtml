@@ -6,8 +6,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E-Players</title>
     <link rel="stylesheet" href="~/css/style_e-players.css">
+    <link rel="shortcut icon" type="image/x-icon" href="~/wwwroot/favicon.ico">
 </head>
 
 <body>
@@ -21,7 +21,7 @@
                 <img class="logo" src="~/assets/logo.svg" alt="Logo E-Players">
             </a>
             <nav id="links" class="linksMenu">
-                <a href="#inicio">início</a>
+                <a asp-area="" asp-controller="Home" asp-action="Index">início</a>
                 <a href="#horarios">horários</a>
                 <a href="#campeonato">campeonato</a>
                 <a href="#">resultados</a>
@@ -90,8 +90,9 @@
                     </ul>
                 </div>
             </div>
-
-            <img class="margem_resp" src="~/assets/logo.svg" alt="Logo E-Players">
+            <a asp-area="" asp-controller="Home" asp-action="Index">
+                <img class="margem_resp" src="~/assets/logo.svg" alt="Logo E-Players">
+            </a>
             <div class="news_footer margem_resp">
                 <span>Faça parte do nosso clã, assine nossa newsletter:</span>
                 <div class="newsletter">

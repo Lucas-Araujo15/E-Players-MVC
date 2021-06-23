@@ -4,12 +4,19 @@
     Equipe equipe = new Equipe();
 }
 
+<head>
+    <title>Jogadores</title>
+    <link rel="shortcut icon" type="image/x-icon" href="~/wwwroot/favicon.ico">
+</head>
+
+<script src="https://kit.fontawesome.com/39a47b8673.js" crossorigin="anonymous"></script>
+
 <section class="banner_cadastro2">
     <h1>Cadastro de Jogadores</h1>
 </section>
 <section class="formulario formulario2">
     <nav class="cadastro cadastro2">
-        <form class="times2 times"  method="POST" action='@Url.Action("Cadastrar")' enctype="multipart/form-data">
+        <form class="times2 times" method="POST" action='@Url.Action("Cadastrar")' enctype="multipart/form-data">
             <div>
                 <label>Id Jogador</label><br>
                 <input name="IdJogador" class="altura" type="text">
@@ -44,17 +51,21 @@
             <h2>Lista de Jogadores</h2>
             <table class="equipes">
                 <thead>
-                    <th>ID</th>
+                    <th>ID da Equipe</th>
                     <th>Nome</th>
-                    <th>Foto</th>
+                    <th>ID do jogador</th>
                     <th>Excluir</th>
                 </thead>
                 <tbody>
                     @foreach (Jogador item in ViewBag.Jogador)
                     {
-                        <tr >
+                        <tr>
                             <td>@item.IdEquipe</td>
                             <td>@item.Nome</td>
+                            <td>@item.IdJogador</td>
+                            <td><a asp-area="" asp-controller="Jogador" asp-action="Excluir" asp-route-id="@item.IdJogador"><i
+                                    class="fas
+    fa-trash" width="300px" style="color:white"></i></a></td>
                         </tr>
                     }
                 </tbody>

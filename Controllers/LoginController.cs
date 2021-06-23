@@ -12,6 +12,11 @@ namespace MVC_E_Players.Controllers
         [TempData]
         public string Mensagem { get; set; }
 
+        [TempData]
+        public int i { get; set; }
+
+
+
 
         Jogador jogadorModel = new Jogador();
 
@@ -23,6 +28,9 @@ namespace MVC_E_Players.Controllers
         [Route("Logar")]
         public IActionResult Logar(IFormCollection form)
         {
+
+            i++;
+            
             List<string> jogadoresCSV = jogadorModel.LerTodasLinhasCSV("database/jogador");
             var logado = jogadoresCSV.Find(x => x.Split(";")[3] == form["Senha1"] && x.Split(";")[4] == form["Email1"]);
 
@@ -31,14 +39,16 @@ namespace MVC_E_Players.Controllers
                 HttpContext.Session.SetString("_Username", logado.Split(";")[1]);
                 return LocalRedirect("~/");
             }
+
             Mensagem = "Dados incorretos, tente novamente...";
             return LocalRedirect("~/Login");
         }
 
         [Route("Logout")]
-        public IActionResult Logout(){
+        public IActionResult Logout()
+        {
             HttpContext.Session.Remove("_Username");
-             return LocalRedirect("~/");
+            return LocalRedirect("~/");
         }
     }
 }
